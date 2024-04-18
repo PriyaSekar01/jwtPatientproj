@@ -12,8 +12,11 @@ import com.patientproject.entity.User;
 
 import lombok.NonNull;
 
+
 public class ApplicationAuditAware implements AuditorAware<String> {
 
+	
+	@NonNull
 	@Override
     public Optional<String> getCurrentAuditor() {
         Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
